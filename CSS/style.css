@@ -56,14 +56,16 @@
     margin-right: 15%;
     margin-top: 10px;
 }
-img{
-    padding: 35px;
-    width:40px;
-}
+
 .right-col p{
     font-size: 25px;
     color:black;
     font-weight: bold;
+    margin-right: 10px;
+}
+#icon{
+    width: 80px;
+    cursor: pointer;
 }
 
 
