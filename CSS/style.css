@@ -9,7 +9,8 @@
     background-image: url(../Images/Background-image1.jpg);
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
+    
 }
 .navbar{
     float:right;
@@ -38,15 +39,31 @@
     text-align: center;
     
 }
-.right-col{
+.left-col{
     margin-left: 5%;
 }
 
-.right-col h1{
+.left-col h1{
     color:rgb(49, 44, 44);
     font-family: 'Babylonica', cursive;
     line-height: 35px;
     
+}
+.right-col{
+    float: right;
+    display:flex;
+    align-items: center;
+    margin-right: 15%;
+    margin-top: 10px;
+}
+img{
+    padding: 35px;
+    width:40px;
+}
+.right-col p{
+    font-size: 25px;
+    color:black;
+    font-weight: bold;
 }
 
 
