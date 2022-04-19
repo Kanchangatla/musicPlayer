@@ -1,4 +1,24 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+     position: relative;
+     height: 100%;
+     width: 80%;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     background: linear-gradient(to right, #E45CDF, #371236);
+}
 
 
 

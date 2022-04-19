@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="../musicPlayer/CSS/style.css">
+    <title>Music Player</title>
 </head>
 <body>
+    <div class="main">  <!----main starts-->
+        <p id="logo"><i class="fa-solid fa-music" aria-hidden="true"></i></p>
+                 <!--left side -->
+      <div class="left">
+               <!------music image------>
+<img id="track-img">
+<div class="volume">
+<p id="volume_show">bluelela </p>
+
+<i class="fa-solid fa-volume-high" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+
+<input type="range" min="0" max="100" value="90" onchange="volume_change()">
+      </div><!---left side-->
+</div>
+<!-----right side---->
+<div class="right">
+   
+    <div class="show_song_no">
+    <p id="present">1</p>
+    <p></p>
+    <p id="total">3</p>
+  </div>
+    <!-----music title----->
+          <p id="title">title.mp3</p>
+       <p id="artist">Artist name</p>
+
+       <!----middle part-->
+<div class="middle">
+<button onclick="previous_song()" id="pre"><i class="fa-solid fa-backward-step" aria-hidden="true"></i></button>
+<button onclick="justplay()" id="play"><i class="fa-solid fa-play" aria-hidden="true"></i></button>
+
+<button onclick="next_song()" id="next"><i class="fa-solid fa-forward-step" aria-hidden="true"></i></button>
+</div>
+
+<!---song duration part-->
+
+<div class="duration">
+   <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+   </div>
+   <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa-solid fa-arrow-rotate-right"></i></button>
+
+</div>
+
+</div><!----main ends-->
     
 </body>
 </html>
