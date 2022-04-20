@@ -28,19 +28,19 @@ let All_song = [
     {
         name:"Betterdays",
         path:"music/bensound-betterdays.mp3",
-        img:"images/img1.jpg",
+        img: "img/img1.jpg",
         singer:"Benjamin Tissot"
     },
     {
         name: "Sunny",
         path: "music/bensound-sunny.mp3",
-        img: "images/img2.jpg",
+        img: "img/img2.jpg",
         singer: "Benjamin Tissot"
     },
     {
         name: "Ukulele",
         path: "music/bensound-ukulele.mp3",
-        img: "images/img3.jpg",
+        img: "img/img3.jpg",
         singer: "Benjamin Tissot"
     }
 ];
