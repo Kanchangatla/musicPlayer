@@ -9,6 +9,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #f198ee;
     
 }
 .main{
@@ -27,8 +28,8 @@ body{
 }
 .main #logo{
     position: absolute;
-    top: 10px;
-    left: 30px;
+    top: 20px;
+    left: 35px;
     font-size: 25px;
     color:black;
     text-transform: capitalize;
@@ -47,7 +48,7 @@ body{
 }
 .left img{
     height: 300px;
-    width: 80%;
+    width: 70%;
     border-radius: 15px;
     box-shadow: 1px 0px 20px 12px rgba(240,240,240,0.2);
 }
