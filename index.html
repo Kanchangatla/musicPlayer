@@ -15,13 +15,13 @@
                  <!--left side -->
       <div class="left">
                <!------music image------>
-<img id="track-img">
+<img id="track_image">
 <div class="volume">
 <p id="volume_show">90</p>
 
 <i class="fa-solid fa-volume-high" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
 
-<input type="range" min="0" max="100" value="90" onchange="volume_change()">
+<input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
       </div><!---left side-->
 </div>
 <!-----right side---->
@@ -49,7 +49,7 @@
 <div class="duration">
    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
    </div>
-   <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa-solid fa-arrow-rotate-right"></i></button>
+   <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa-solid fa-arrow-rotate-right" area-hidden="true"></i></button>
 
 </div>
 

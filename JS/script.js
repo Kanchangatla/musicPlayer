@@ -48,6 +48,8 @@ let All_song = [
 
 //function load the track
 function load_track(index_no){
+    clearInterval(timer);
+    reset_slider();
     track.src = All_song[index_no].path;
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
@@ -56,8 +58,25 @@ function load_track(index_no){
 
     total.innerHTML = All_song.length;
     present.innerHTML = index_no + 1;
+    timer = setInterval(range_slider , 1000);
 }
 load_track(index_no);
+
+
+//mute sound
+function mute_sound(){
+    track.volume = 0;
+    volume.value = 0;
+    volume_show.innerHTML = 0;
+}
+
+
+//reset song slider
+
+function reset_slider(){
+    slider.value = 0;
+}
+
 
 //checking the song is playing or not
 function justplay(){
@@ -109,3 +128,47 @@ function previous_song(){
 
     }
 }
+// change volume
+function volume_change(){
+	volume_show.innerHTML = recent_volume.value;
+	track.volume = recent_volume.value / 100;
+}
+
+// change slider position 
+function change_duration(){
+	slider_position = track.duration * (slider.value / 100);
+	track.currentTime = slider_position;
+}
+
+// autoplay function
+function autoplay_switch(){
+	if (autoplay==1){
+       autoplay=0;
+       auto_play.style.background = "#d93ad4";
+	}else{
+       autoplay = 1;
+       auto_play.style.background = "#2b1e29";
+	}
+}
+
+
+function range_slider(){
+	let position = 0;
+        
+        // update slider position
+		if(!isNaN(track.duration)){
+		   position = track.currentTime * (100 / track.duration);
+		   slider.value =  position;
+	      }
+
+       
+       // function will run when the song is over
+       if(track.ended){
+       	 play.innerHTML = '<i class="fa fa-play"></i>';
+           if(autoplay==1){
+		       index_no += 1;
+		       load_track(index_no);
+		       playsong();
+           }
+	    }
+     }
